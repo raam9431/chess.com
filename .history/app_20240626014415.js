@@ -1,0 +1,15 @@
+const app = require('express');
+const socket = require('socket.io'); 
+const http = require('http');
+const {Chess} = require("chess.js");
+
+const app = express();
+
+
+const server = http.createServer(app);
+
+// - Instantiate Socket.io on HTTP server
+const io = socket(server);
+
+
+
