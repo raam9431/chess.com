@@ -5,7 +5,6 @@ const http = require('http');
 const {Chess} = require("chess.js");
 const { log } = require('console');
 const path = require('path');
-const { connected } = require('process');
 
 // - Create Express app instance
 const app = express();
@@ -25,18 +24,14 @@ const chess = new Chess();
 let players = {};
 let currentPlayer = "w";
 
-// - Configure Express app:
-//     - Use EJS templating engine
-//     - Serve static files from 'public' directory
+- Configure Express app:
+    - Use EJS templating engine
+    - Serve static files from 'public' directory
 app.set("view engine","ejs");
 app.use(express.static(path.join(__dirname,"public")));
 
 app.get("/", (req,res) => {
-    res.render("index",{title: "Chess Game"});
-});
-
-io.on("connection", function(uniquesocket){
-    console.log("connected");
+    res.render("index");
 });
 
 server.listen(3000, function () {

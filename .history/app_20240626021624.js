@@ -5,7 +5,6 @@ const http = require('http');
 const {Chess} = require("chess.js");
 const { log } = require('console');
 const path = require('path');
-const { connected } = require('process');
 
 // - Create Express app instance
 const app = express();
@@ -36,7 +35,7 @@ app.get("/", (req,res) => {
 });
 
 io.on("connection", function(uniquesocket){
-    console.log("connected");
+    console.lgo
 });
 
 server.listen(3000, function () {
