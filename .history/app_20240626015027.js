@@ -13,7 +13,6 @@ const server = http.createServer(app);
 // - Instantiate Socket.io on HTTP server
 const io = socket(server);
 
-// - Create Chess object instance (chess.js)
 
 
 

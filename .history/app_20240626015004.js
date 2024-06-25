@@ -7,14 +7,11 @@ const {Chess} = require("chess.js");
 // - Create Express app instance
 const app = express();
 
-// - Initialize HTTP server with Express
+- Initialize HTTP server with Express
 const server = http.createServer(app);
 
 // - Instantiate Socket.io on HTTP server
 const io = socket(server);
-
-// - Create Chess object instance (chess.js)
-
 
 
 
